@@ -1117,3 +1117,67 @@ Processing by PortfoliosController#index as HTML
 Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/portfolios" for ::1 at 2019-12-06 14:44:48 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (5.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 222ms (Views: 203.8ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/portfolios" for ::1 at 2019-12-06 14:46:50 -0500
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 30ms (Views: 23.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/portfolio/4" for ::1 at 2019-12-06 14:46:52 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering portfolios/show.html.erb within layouts/application
+  Rendered portfolios/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 17.4ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/portfolios/4" for ::1 at 2019-12-06 14:47:04 -0500
+Processing by PortfoliosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4L8X8hWzHj5E6J8LNMXDL25r89AeQnS0PWPL6NYWJWNYV/aRvZLydjs+qw3X7YeYQrzx8nORb8vfyrlQZGfT9A==", "id"=>"4"}
+  [1m[36mPortfolio Load (1.2ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "portfolios" WHERE "portfolios"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 5ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/portfolios" for ::1 at 2019-12-06 14:47:04 -0500
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/portfolios/5" for ::1 at 2019-12-06 14:47:08 -0500
+Processing by PortfoliosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0foI6N3sCpI/f1pWLrpVCaWr75XkH5DKjb4NUP3HXkJpEumLdc3m2kCpblDNkhG+iXztt4nMi7VvF3/oT7ao1Q==", "id"=>"5"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "portfolios" WHERE "portfolios"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 3ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/portfolios" for ::1 at 2019-12-06 14:47:08 -0500
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.5ms)
+
+
