@@ -42,3 +42,10 @@ end
     thumbnail: "https://via.placeholder.com/300x200"
         )
 end
+
+3.times do |tech|
+    Technology.create!(
+        name: "Technology #{tech}",
+        portfolio_id: Portfolio.last.id
+    )
+end

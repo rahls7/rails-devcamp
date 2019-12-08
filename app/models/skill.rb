@@ -1,5 +1,5 @@
 class Skill < ApplicationRecord
-    inlude Placeholder
+    include Placeholder
     validates_presence_of :percent_utilized, :title
 
     after_initialize :set_defaults
