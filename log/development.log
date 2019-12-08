@@ -2128,3 +2128,200 @@ Processing by PortfoliosController#show as HTML
 Completed 200 OK in 24ms (Views: 19.2ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/portfolios" for ::1 at 2019-12-07 23:03:37 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.1) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.1) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.4ms)
+  Rendering /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendering /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.5ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5396089536776303610);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddBadgeToSkills (20191208035906)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "skills" ADD "bade" text[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191208035906"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5396089536776303610)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/portfolios" for ::1 at 2019-12-07 23:04:08 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 200ms (Views: 184.2ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/portfolios/new" for ::1 at 2019-12-07 23:04:11 -0500
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/portfolios" for ::1 at 2019-12-07 23:04:26 -0500
+Processing by PortfoliosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mTgd8dxgLTiDHDjoSUeEIsX0OCYgfs33CQdle5AsYjGeRVbjLux4na4EZsFsmmUSuCEQNxHoC0zvEKBqo/h+rg==", "portfolio"=>{"title"=>"Test badges", "subtitle"=>"Badges placegolder", "body"=>"fkoaisf"}, "commit"=>"Create Portfolio"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumbnail", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Test badges"], ["subtitle", "Badges placegolder"], ["body", "fkoaisf"], ["main_image", "http://placehold.it600x400"], ["thumbnail", "http://placehold.it350x200"], ["created_at", 2019-12-08 04:04:26 UTC], ["updated_at", 2019-12-08 04:04:26 UTC]]
+  [1m[35m (11.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 17ms (ActiveRecord: 12.7ms)
+
+
+Started GET "/portfolios" for ::1 at 2019-12-07 23:04:26 -0500
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/portfolios" for ::1 at 2019-12-07 23:05:54 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 192ms (Views: 175.9ms | ActiveRecord: 4.6ms)
+
+
+Started DELETE "/portfolios/11" for ::1 at 2019-12-07 23:05:58 -0500
+Processing by PortfoliosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Qrfz5GRiTuJ5dcpZB62XLBgK0Duqn6JeQdkYQRAXuon6XxKHzEOiqgaj/l/khdObNN3SGcdMuSGjcGr5omZMHg==", "id"=>"11"}
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[31mDELETE FROM "portfolios" WHERE "portfolios"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 8ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/portfolios" for ::1 at 2019-12-07 23:05:58 -0500
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/portfolios/new" for ::1 at 2019-12-07 23:06:00 -0500
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/portfolios" for ::1 at 2019-12-07 23:06:07 -0500
+Processing by PortfoliosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9NTYK0xbEmXGECifbtBP+X8LEbaVBwNX7xiKEn7WrdrzqZM5vtdHwOsIdrZLDa7JAt45p6SRxewJD08DTQKxRQ==", "portfolio"=>{"title"=>"New item item ", "subtitle"=>"item", "body"=>"item "}, "commit"=>"Create Portfolio"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumbnail", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "New item item "], ["subtitle", "item"], ["body", "item "], ["main_image", "http://placehold.it600x400"], ["thumbnail", "http://placehold.it350x200"], ["created_at", 2019-12-08 04:06:07 UTC], ["updated_at", 2019-12-08 04:06:07 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 5ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/portfolios" for ::1 at 2019-12-07 23:06:07 -0500
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/portfolios/12" for ::1 at 2019-12-07 23:06:39 -0500
+Processing by PortfoliosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"c/00HpfrPOqDz3XOxzJBCquy/dPAp+zwAvgQ1vzUbsfLFdV9P8rQovwZQcgkGgW9h2X/8a1094/gUWJuTqWYUA==", "id"=>"12"}
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "portfolios" WHERE "portfolios"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 14ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/portfolios" for ::1 at 2019-12-07 23:06:39 -0500
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/portfolios/new" for ::1 at 2019-12-07 23:06:40 -0500
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/portfolios" for ::1 at 2019-12-07 23:06:50 -0500
+Processing by PortfoliosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W+qBGvoep9KAPTw+JMgnIgFPI8vncEoI7sZvWPYQMyJcl8oICJLyd60lYhcBFcYSfJoL2tbmjLMI0apJxcQvvQ==", "portfolio"=>{"title"=>"Hello", "subtitle"=>"Hello test", "body"=>"test t=erfsdf"}, "commit"=>"Create Portfolio"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumbnail", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Hello"], ["subtitle", "Hello test"], ["body", "test t=erfsdf"], ["main_image", "http://placehold.it/600x400"], ["thumbnail", "http://placehold.it/350x200"], ["created_at", 2019-12-08 04:06:50 UTC], ["updated_at", 2019-12-08 04:06:50 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/portfolios" for ::1 at 2019-12-07 23:06:50 -0500
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.4ms)
+
+
