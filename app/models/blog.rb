@@ -5,5 +5,5 @@ extend FriendlyId
 
   validates_presence_of :title, :body
 
-  belongs_To :topic
+  belongs_to :topic
 end

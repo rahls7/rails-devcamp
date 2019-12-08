@@ -1,3 +1,9 @@
+3.times do |topic|
+    Topic.create!(
+        title: "Topic #{topic}"
+    )
+end
+
 10.times do |blog|
     Blog.create!(
         title: "My Blog Post #{blog}",
@@ -16,10 +22,21 @@ end
 
 puts "5 skills created"
 
-9.times do |portfolio_item|
+8.times do |portfolio_item|
     Portfolio.create!(
     title: "Portfolio title: #{portfolio_item}",
-    subtitle: "My great service",
+    subtitle: "Node",
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
+    main_image: "https://via.placeholder.com/600x400",
+    thumbnail: "https://via.placeholder.com/300x200"
+        )
+end
+
+
+1.times do |portfolio_item|
+    Portfolio.create!(
+    title: "Portfolio title: #{portfolio_item}",
+    subtitle: "React",
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend",
     main_image: "https://via.placeholder.com/600x400",
     thumbnail: "https://via.placeholder.com/300x200"
