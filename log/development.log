@@ -3417,3 +3417,63 @@ Processing by Devise::RegistrationsController#edit as HTML
 Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.5ms)
 
 
+Started DELETE "/logout" for ::1 at 2019-12-08 17:55:02 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/rahls7/Desktop/devCamp/rails-devcamp/app/controllers/concerns/devise_whitelist.rb:5)
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OeZSec5tYFSQBCD1Sj0OxM7ll3S6UNXSF1yMAus3Xv5OsMGEXPMMwHmrYewvRSi3jgrvog7Ut+aZ/8Fm3TKmvw=="}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 48ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/" for ::1 at 2019-12-08 17:55:02 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 189ms (Views: 172.3ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/register" for ::1 at 2019-12-08 17:55:04 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 53ms (Views: 52.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for ::1 at 2019-12-08 17:55:17 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0oOjEPHIWXngG4KV6EP/1U6Mr2TG9OYA6ezHpVfqWBklxJ274fKWYdlfo8gvlGfftH1A2HrXTSV2GbDSg7FPDA==", "user"=>{"email"=>"test3@test.com", "name"=>"Rahul", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test3@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "test3@test.com"], ["encrypted_password", "$2a$11$buXLi.1UscXD25XQ1hqRler4LSbSMD81a9RGgl3lj6XnphSQ4OUXK"], ["name", "Rahul"], ["created_at", 2019-12-08 22:55:17 UTC], ["updated_at", 2019-12-08 22:55:17 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 148ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-08 17:55:17 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/edit" for ::1 at 2019-12-08 17:55:20 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.4ms)
+
+
