@@ -3554,3 +3554,88 @@ Processing by BlogsController#index as HTML
 Completed 200 OK in 33ms (Views: 29.3ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for ::1 at 2019-12-08 21:32:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/rahls7/Desktop/devCamp/rails-devcamp/app/controllers/concerns/devise_whitelist.rb:5)
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.6ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (43.1ms)
+Completed 200 OK in 214ms (Views: 178.7ms | ActiveRecord: 11.1ms)
+
+
+Started DELETE "/logout" for ::1 at 2019-12-08 21:32:47 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PJjx0Abam5TNBNcKmOw6lO4C2Yu7D53+VIFeRiKXiMAHmazPG6Tb9Z+roFeNp42p2C1AvqqKh7zFDGjHJvTYqQ=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-12-08 21:32:47 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for ::1 at 2019-12-08 21:32:50 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (34.5ms)
+Completed 200 OK in 60ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/portfolios" for ::1 at 2019-12-08 21:32:57 -0500
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 52ms (Views: 41.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/portfolios/new" for ::1 at 2019-12-08 21:32:59 -0500
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 69ms (Views: 31.4ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/portfolios" for ::1 at 2019-12-08 21:33:14 -0500
+Processing by PortfoliosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ffPt8EpDR99WmuBhyoMZCNyJekzeqEIN0CNFYJ6tOXfPW1IdBzGnDS9oEQyAeCf6KrZEHsE6mUcQ8zxmwddqbg==", "portfolio"=>{"title"=>"resr", "subtitle"=>"fdsvsd", "body"=>"fasfsdgsedc", "technologies_attributes"=>{"0"=>{"name"=>"ruby"}, "1"=>{"name"=>"rails"}, "2"=>{"name"=>"mysql"}}}, "commit"=>"Create Portfolio"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumbnail", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "resr"], ["subtitle", "fdsvsd"], ["body", "fasfsdgsedc"], ["main_image", "http://placehold.it/600x400"], ["thumbnail", "http://placehold.it/350x200"], ["created_at", 2019-12-09 02:33:14 UTC], ["updated_at", 2019-12-09 02:33:14 UTC]]
+  [1m[35mSQL (6.7ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ruby"], ["portfolio_id", 16], ["created_at", 2019-12-09 02:33:14 UTC], ["updated_at", 2019-12-09 02:33:14 UTC]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "rails"], ["portfolio_id", 16], ["created_at", 2019-12-09 02:33:14 UTC], ["updated_at", 2019-12-09 02:33:14 UTC]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "mysql"], ["portfolio_id", 16], ["created_at", 2019-12-09 02:33:14 UTC], ["updated_at", 2019-12-09 02:33:14 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 19ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/portfolios" for ::1 at 2019-12-08 21:33:14 -0500
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 44ms (Views: 41.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/portfolio/16" for ::1 at 2019-12-08 21:33:19 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (1.6ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 16]]
+  Rendered portfolios/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 30ms (Views: 22.3ms | ActiveRecord: 2.1ms)
+
+
