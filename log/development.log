@@ -3986,3 +3986,158 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 27ms (Views: 23.9ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/" for ::1 at 2019-12-10 20:56:06 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/rahls7/Desktop/devCamp/rails-devcamp/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DefaultPageContent> at /Users/rahls7/Desktop/devCamp/rails-devcamp/app/controllers/concerns/default_page_content.rb:5)
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.6ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 281ms (Views: 241.3ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/" for ::1 at 2019-12-10 20:56:07 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-10 20:56:08 -0500
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (3.8ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( blogs.css )` to `config/initializers/assets.rb` and restart your server):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/views/layouts/blog.html.erb:7:in `_app_views_layouts_blog_html_erb___4134876897420175830_70123673910140'
+  Rendering /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.9ms)
+Started GET "/blogs" for ::1 at 2019-12-10 20:56:51 -0500
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (3.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( blogs.css )` to `config/initializers/assets.rb` and restart your server):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/views/layouts/blog.html.erb:7:in `_app_views_layouts_blog_html_erb___4134876897420175830_70123725181280'
+  Rendering /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.1ms)
+Started GET "/blogs" for ::1 at 2019-12-10 20:57:09 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/rahls7/Desktop/devCamp/rails-devcamp/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DefaultPageContent> at /Users/rahls7/Desktop/devCamp/rails-devcamp/app/controllers/concerns/default_page_content.rb:5)
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (15.8ms)
+Completed 200 OK in 192ms (Views: 162.6ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for ::1 at 2019-12-10 21:45:45 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (1.6ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 41ms (Views: 31.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-10 21:45:45 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (2.7ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 42ms (Views: 36.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/portfolios" for ::1 at 2019-12-10 21:45:48 -0500
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (2.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 44ms (Views: 29.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/portfolios" for ::1 at 2019-12-10 21:46:51 -0500
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/rahls7/Desktop/devCamp/rails-devcamp/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DefaultPageContent> at /Users/rahls7/Desktop/devCamp/rails-devcamp/app/controllers/concerns/default_page_content.rb:5)
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/portfolio (13.1ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( portfolios.css )` to `config/initializers/assets.rb` and restart your server):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/views/layouts/portfolio.html.erb:7:in `_app_views_layouts_portfolio_html_erb__2942251924697561331_70171520874580'
+  Rendering /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/rahls7/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.0ms)
+Started GET "/portfolios" for ::1 at 2019-12-10 21:47:11 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/rahls7/Desktop/devCamp/rails-devcamp/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DefaultPageContent> at /Users/rahls7/Desktop/devCamp/rails-devcamp/app/controllers/concerns/default_page_content.rb:5)
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/portfolio (17.7ms)
+Completed 200 OK in 228ms (Views: 201.6ms | ActiveRecord: 4.4ms)
+
+
