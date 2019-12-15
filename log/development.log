@@ -4885,3 +4885,14 @@ Processing by PagesController#about as HTML
 Completed 200 OK in 317ms (Views: 303.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/about-me" for ::1 at 2019-12-15 14:01:49 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/rahls7/Desktop/devCamp/rails-devcamp/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DefaultPageContent> at /Users/rahls7/Desktop/devCamp/rails-devcamp/app/controllers/concerns/default_page_content.rb:5)
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (1.1ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 312ms (Views: 299.5ms | ActiveRecord: 0.0ms)
+
+

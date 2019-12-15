@@ -4,11 +4,4 @@ class ApplicationController < ActionController::Base
   include SetSource
   include CurrentUserConcern
   include DefaultPageContent
-
-  before_action :set_copywright
-
-  def set_copywright
-    @copywright = GenericCopywrightSite::Renderer.copywright("Rahul Sharma", 'All rights reserved')
-  end
-
 end

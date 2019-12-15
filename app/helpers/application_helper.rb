@@ -15,4 +15,8 @@ module ApplicationHelper
             content_tag(:p, greeting, class: "source-greeting")
         end
     end
+
+    def copywright_generator
+        GenericCopywrightSite::Renderer.copywright("Rahul Sharma", 'All rights reserved')
+    end
 end
