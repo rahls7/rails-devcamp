@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/rahls7/GenericCopywrightSite
+  revision: 0762119be94999fd13883c8cdb1d9809fc6f31e3
+  specs:
+    generic_copywright_site (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -189,6 +195,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise (~> 4.7, >= 4.7.1)
   friendly_id (~> 5.2.4)
+  generic_copywright_site!
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)

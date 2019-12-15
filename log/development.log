@@ -4793,3 +4793,95 @@ Processing by PagesController#about as HTML
 Completed 200 OK in 41ms (Views: 38.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-12-14 18:27:41 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/rahls7/Desktop/devCamp/rails-devcamp/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DefaultPageContent> at /Users/rahls7/Desktop/devCamp/rails-devcamp/app/controllers/concerns/default_page_content.rb:5)
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (1.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (29.9ms)
+  Rendered shared/_nav.html.erb (0.8ms)
+Completed 200 OK in 471ms (Views: 434.7ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/" for ::1 at 2019-12-14 18:27:42 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (4.5ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 61ms (Views: 58.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-12-14 18:28:16 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (3.6ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 43ms (Views: 40.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-12-14 18:28:18 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (5.0ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 50ms (Views: 46.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2019-12-14 18:28:48 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (3.7ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 40.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-12-14 18:29:14 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (3.6ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 48ms (Views: 45.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/about-me" for ::1 at 2019-12-14 18:29:32 -0500
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about-me" for ::1 at 2019-12-14 18:30:35 -0500
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/rahls7/Desktop/devCamp/rails-devcamp/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DefaultPageContent> at /Users/rahls7/Desktop/devCamp/rails-devcamp/app/controllers/concerns/default_page_content.rb:5)
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 41ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about-me" for ::1 at 2019-12-15 13:58:21 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (5.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/rahls7/Desktop/devCamp/rails-devcamp/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DefaultPageContent> at /Users/rahls7/Desktop/devCamp/rails-devcamp/app/controllers/concerns/default_page_content.rb:5)
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (1.6ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 317ms (Views: 303.3ms | ActiveRecord: 0.0ms)
+
+
